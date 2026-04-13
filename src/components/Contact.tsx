@@ -3,14 +3,11 @@
 import { useState, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import FadeIn from "@/components/FadeIn";
+import { useLanguage } from "@/context/LanguageContext";
 
-// To enable email sending:
-// 1. Create a free account at https://emailjs.com
-// 2. Create a service and email template
-// 3. Create .env.local with the three variables below
-const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
+const SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID  ?? "";
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
-const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
+const PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  ?? "";
 
 const socials = [
   {
@@ -47,11 +44,12 @@ type Status = "idle" | "sending" | "success" | "error";
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
+  const { t } = useLanguage();
+  const c = t.contact;
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      // Fallback: open mailto
       window.location.href = `mailto:amitginz@gmail.com?subject=Hello from ${form.name}&body=${encodeURIComponent(form.message)}`;
       return;
     }
@@ -73,50 +71,45 @@ export default function Contact() {
     <section id="contact" className="py-24 px-6 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-3xl mx-auto">
         <FadeIn>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Get In Touch</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{c.title}</h2>
           <div className="w-12 h-1 bg-indigo-500 rounded mb-6" />
-          <p className="text-gray-600 dark:text-gray-400 mb-10 max-w-lg">
-            I&apos;m open to new opportunities in software engineering. Whether you
-            have a question, a project idea, or just want to connect — feel free
-            to reach out.
-          </p>
+          <p className="text-gray-600 dark:text-gray-400 mb-10 max-w-lg">{c.description}</p>
         </FadeIn>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* Contact form */}
           <FadeIn delay={0.1}>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1">{c.name}</label>
                 <input
                   type="text"
                   required
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors text-sm"
-                  placeholder="Your name"
+                  placeholder={c.namePlaceholder}
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1">{c.email}</label>
                 <input
                   type="email"
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors text-sm"
-                  placeholder="your@email.com"
+                  placeholder={c.emailPlaceholder}
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1">{c.message}</label>
                 <textarea
                   required
                   rows={4}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors text-sm resize-none"
-                  placeholder="What's on your mind?"
+                  placeholder={c.messagePlaceholder}
                 />
               </div>
               <button
@@ -124,18 +117,13 @@ export default function Contact() {
                 disabled={status === "sending"}
                 className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60 text-white rounded-lg font-medium transition-colors text-sm"
               >
-                {status === "sending" ? "Sending…" : "Send Message"}
+                {status === "sending" ? c.sending : c.send}
               </button>
-              {status === "success" && (
-                <p className="text-sm text-emerald-600 dark:text-emerald-400 text-center">Message sent! I&apos;ll get back to you soon.</p>
-              )}
-              {status === "error" && (
-                <p className="text-sm text-red-500 text-center">Something went wrong. Please email me directly.</p>
-              )}
+              {status === "success" && <p className="text-sm text-emerald-600 dark:text-emerald-400 text-center">{c.success}</p>}
+              {status === "error"   && <p className="text-sm text-red-500 text-center">{c.error}</p>}
             </form>
           </FadeIn>
 
-          {/* Social links */}
           <FadeIn delay={0.2}>
             <div className="flex flex-col justify-center gap-4">
               {socials.map((s) => (

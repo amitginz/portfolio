@@ -1,0 +1,171 @@
+export const translations = {
+  en: {
+    dir: "ltr" as const,
+    nav: {
+      about: "About",
+      skills: "Skills",
+      projects: "Projects",
+      experience: "Experience",
+      contact: "Contact",
+      now: "Now",
+    },
+    availability: "Open to work",
+    hero: {
+      greeting: "Hello, world!",
+      description:
+        "CS student at Tel-Hai University, building autonomous workflows and interactive applications with Node.js, Python & Java.",
+      viewProjects: "View Projects",
+      downloadCV: "Download CV",
+      contactMe: "Contact Me",
+    },
+    about: {
+      title: "About Me",
+      bio1:
+        "Computer Science student at Tel-Hai University (B.Sc. 2024–2026), specialized in AI Agents, Backend Engineering, and Mobile Development. I focus on building autonomous workflows and interactive applications using Node.js, Python, and Java.",
+      bio2:
+        "Beyond code, I'm a Combat Commander in IDF Reserve (Brigade 188), awarded Battalion distinction for leadership during \"Iron Swords\". I also volunteer mentoring youth with physical disabilities at Beit Galgalim.",
+      name: "Name",
+      degree: "Degree",
+      university: "University",
+      focus: "Focus",
+      email: "Email",
+      status: "Status",
+      statusValue: "Open to opportunities",
+      degreeValue: "B.Sc. Computer Science",
+      focusValue: "AI Agents · Backend · Mobile",
+    },
+    skills: { title: "Skills" },
+    projects: {
+      title: "Projects",
+      seeMore: "See more ↓",
+      seeLess: "Show less ↑",
+      caseStudy: "Case Study ↗",
+    },
+    experience: { title: "Experience" },
+    contact: {
+      title: "Get In Touch",
+      description:
+        "I'm open to new opportunities in software engineering. Whether you have a question, a project idea, or just want to connect — feel free to reach out.",
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      namePlaceholder: "Your name",
+      emailPlaceholder: "your@email.com",
+      messagePlaceholder: "What's on your mind?",
+      send: "Send Message",
+      sending: "Sending…",
+      success: "Message sent! I'll get back to you soon.",
+      error: "Something went wrong. Please email me directly.",
+    },
+    stats: {
+      projects: "Projects Built",
+      technologies: "Technologies",
+      users: "Users Served",
+      languages: "Coding Languages",
+    },
+    testimonials: {
+      title: "Kind Words",
+      subtitle: "What colleagues & collaborators have said",
+    },
+    github: { title: "GitHub Activity", repos: "Public Repos", followers: "Followers" },
+    now: { title: "What I'm Doing Now" },
+    footer: "Built with Next.js & Tailwind CSS",
+    palette: {
+      placeholder: "Search pages, projects, links…",
+      sections: "Sections",
+      projects: "Projects",
+      links: "Links",
+    },
+    easter: {
+      title: "// you found the easter egg",
+      subtitle: "Nice moves. You know the code.",
+      close: "[ ESC to close ]",
+    },
+  },
+  he: {
+    dir: "rtl" as const,
+    nav: {
+      about: "אודות",
+      skills: "מיומנויות",
+      projects: "פרויקטים",
+      experience: "ניסיון",
+      contact: "צור קשר",
+      now: "עכשיו",
+    },
+    availability: "פתוח להצעות",
+    hero: {
+      greeting: "!שלום, עולם",
+      description:
+        "סטודנט למדעי המחשב באוניברסיטת תל-חי, בונה זרימות עבודה אוטונומיות ויישומים אינטראקטיביים עם Node.js, Python ו-Java.",
+      viewProjects: "צפה בפרויקטים",
+      downloadCV: "הורד קורות חיים",
+      contactMe: "צור קשר",
+    },
+    about: {
+      title: "אודותי",
+      bio1:
+        "סטודנט למדעי המחשב באוניברסיטת תל-חי (תואר ראשון 2024–2026), המתמחה בסוכני בינה מלאכותית, פיתוח Backend ופיתוח מובייל. אני מתמקד בבניית זרימות עבודה אוטונומיות ויישומים אינטראקטיביים באמצעות Node.js, Python ו-Java.",
+      bio2:
+        "מעבר לקוד, אני מפקד לחימה במילואים (חטיבה 188), שזכה להצטיינות גדוד על מנהיגות במהלך \"חרבות ברזל\". אני גם מתנדב במנטורינג של נוער עם מוגבלויות פיזיות בבית גלגלים.",
+      name: "שם",
+      degree: "תואר",
+      university: "אוניברסיטה",
+      focus: "התמחות",
+      email: "אימייל",
+      status: "סטטוס",
+      statusValue: "פתוח להזדמנויות",
+      degreeValue: "בוגר מדעי המחשב",
+      focusValue: "סוכני AI · Backend · מובייל",
+    },
+    skills: { title: "מיומנויות" },
+    projects: {
+      title: "פרויקטים",
+      seeMore: "ראה עוד ↓",
+      seeLess: "הצג פחות ↑",
+      caseStudy: "מקרה מחקר ↗",
+    },
+    experience: { title: "ניסיון" },
+    contact: {
+      title: "צור קשר",
+      description:
+        "אני פתוח להזדמנויות חדשות בפיתוח תוכנה. בין אם יש לך שאלה, רעיון לפרויקט, או סתם רוצה להתחבר — אל תהסס לפנות.",
+      name: "שם",
+      email: "אימייל",
+      message: "הודעה",
+      namePlaceholder: "השם שלך",
+      emailPlaceholder: "האימייל שלך",
+      messagePlaceholder: "מה בראשך?",
+      send: "שלח הודעה",
+      sending: "שולח…",
+      success: "!ההודעה נשלחה! אחזור אליך בקרוב",
+      error: "משהו השתבש. אנא שלח לי אימייל ישירות.",
+    },
+    stats: {
+      projects: "פרויקטים",
+      technologies: "טכנולוגיות",
+      users: "משתמשים פעילים",
+      languages: "שפות תכנות",
+    },
+    testimonials: {
+      title: "מה אומרים",
+      subtitle: "מה קולגות ושותפים אמרו",
+    },
+    github: { title: "פעילות GitHub", repos: "מאגרים ציבוריים", followers: "עוקבים" },
+    now: { title: "מה אני עושה עכשיו" },
+    footer: "נבנה עם Next.js ו-Tailwind CSS",
+    palette: {
+      placeholder: "חפש דפים, פרויקטים, קישורים…",
+      sections: "סקציות",
+      projects: "פרויקטים",
+      links: "קישורים",
+    },
+    easter: {
+      title: "// מצאת את הפסקה הסודית",
+      subtitle: ".מהלכים יפים. אתה מכיר את הקוד",
+      close: "[ ESC לסגירה ]",
+    },
+  },
+};
+
+export type Lang = keyof typeof translations;
+export type T = typeof translations.en;

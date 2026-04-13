@@ -3,6 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ThemeProvider from "@/components/ThemeProvider";
+import LoadingScreen from "@/components/LoadingScreen";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
+import CommandPalette from "@/components/CommandPalette";
+import EasterEgg from "@/components/EasterEgg";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,11 +38,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
       <body className="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased transition-colors duration-300">
         <ThemeProvider>
-          <Navbar />
-          {children}
+          <LanguageProvider>
+            <LoadingScreen />
+            <CustomCursor />
+            <ScrollProgress />
+            <CommandPalette />
+            <EasterEgg />
+            <Navbar />
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

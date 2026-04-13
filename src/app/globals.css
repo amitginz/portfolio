@@ -6,3 +6,34 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Hide system cursor on mouse devices — replaced by CustomCursor */
+@media (hover: hover) and (pointer: fine) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #c7d2fe 0%, #818cf8 40%, #6366f1 70%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Floating animation for glow orbs */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-14px) scale(1.03); }
+}
+
+@keyframes float-rev {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(14px) scale(0.97); }
+}
+
+.animate-float      { animation: float-slow 10s ease-in-out infinite; }
+.animate-float-rev  { animation: float-rev  14s ease-in-out infinite; }
