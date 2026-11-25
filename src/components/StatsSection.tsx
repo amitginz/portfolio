@@ -7,7 +7,6 @@ import { useLanguage } from "@/context/LanguageContext";
 const stats = [
   { key: "projects" as const, value: 6, suffix: "+" },
   { key: "technologies" as const, value: 15, suffix: "+" },
-  { key: "users" as const, value: 30, suffix: "+" },
   { key: "languages" as const, value: 5, suffix: "" },
 ];
 
@@ -51,7 +50,7 @@ export default function StatsSection() {
 
   return (
     <section ref={ref} className="py-16 px-6 border-y border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950">
-      <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div className="max-w-3xl mx-auto grid grid-cols-3 gap-8 text-center">
         {stats.map((s, i) => (
           <motion.div
             key={s.key}
