@@ -27,7 +27,7 @@ export default function About() {
               {([
                 [a.name,       "Amit Ginzberg"],
                 [a.degree,     a.degreeValue],
-                [a.university, "Tel-Hai University"],
+                [a.university, "Tel-Hai Academic College"],
                 [a.focus,      a.focusValue],
                 [a.email,      "amitginz@gmail.com"],
                 [a.status,     a.statusValue],

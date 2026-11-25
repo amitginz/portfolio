@@ -14,7 +14,7 @@ export const translations = {
       greeting: "Hello, world!",
       iam: "I'm",
       description:
-        "CS graduate from Tel-Hai University, building backend services, LLM-powered tools and web apps with Python, Node.js, C++ & React.",
+        "CS graduate from Tel-Hai Academic College, building backend services, LLM-powered tools and web apps with Python, Node.js, C++ & React.",
       viewProjects: "View Projects",
       downloadCV: "Download CV",
       contactMe: "Contact Me",
@@ -22,12 +22,12 @@ export const translations = {
     about: {
       title: "About Me",
       bio1:
-        "Computer Science graduate of Tel-Hai University (B.Sc. 2026, CS Excellence Program, top 5%, GPA 85), looking for my first role as a software engineer. I build backend services, LLM-powered tools and web apps with Python, Node.js, C++ and React, and I care about testing: AgentProbe, my latest project, catches regressions in LLM agents.",
+        "Computer Science graduate of Tel-Hai Academic College (B.Sc. 2026, CS Excellence Program, top 5%, GPA 85), looking for my first role as a software engineer. I build backend services, LLM-powered tools and web apps with Python, Node.js, C++ and React, and I care about testing: AgentProbe, my latest project, catches regressions in LLM agents.",
       bio2:
         "Beyond code, I'm a Combat Commander in IDF Reserve (Brigade 188), awarded Battalion distinction for leadership during \"Iron Swords\". I also volunteer mentoring youth with physical disabilities at Beit Galgalim.",
       name: "Name",
       degree: "Degree",
-      university: "University",
+      university: "Institution",
       focus: "Focus",
       email: "Email",
       status: "Status",
@@ -98,7 +98,7 @@ export const translations = {
       greeting: "שלום, עולם!",
       iam: "אני",
       description:
-        "בוגר מדעי המחשב מאוניברסיטת תל-חי, בונה שירותי Backend, כלים מבוססי LLM ואפליקציות ווב עם Python, Node.js, C++‎ ו-React.",
+        "בוגר מדעי המחשב ממכללת תל-חי, בונה שירותי Backend, כלים מבוססי LLM ואפליקציות ווב עם Python, Node.js, C++‎ ו-React.",
       viewProjects: "צפה בפרויקטים",
       downloadCV: "הורד קורות חיים",
       contactMe: "צור קשר",
@@ -106,12 +106,12 @@ export const translations = {
     about: {
       title: "אודותי",
       bio1:
-        "בוגר מדעי המחשב באוניברסיטת תל-חי (תואר ראשון 2026, תוכנית מצוינות, 5% העליונים, ממוצע 85), מחפש תפקיד ראשון כמהנדס תוכנה. אני בונה שירותי Backend, כלים מבוססי LLM ואפליקציות ווב עם Python, Node.js, C++‎ ו-React, ואכפת לי מבדיקות: AgentProbe, הפרויקט האחרון שלי, מזהה נסיגות באיכות של סוכני LLM.",
+        "בוגר מדעי המחשב במכללת תל-חי (תואר ראשון 2026, תוכנית מצוינות, 5% העליונים, ממוצע 85), מחפש תפקיד ראשון כמהנדס תוכנה. אני בונה שירותי Backend, כלים מבוססי LLM ואפליקציות ווב עם Python, Node.js, C++‎ ו-React, ואכפת לי מבדיקות: AgentProbe, הפרויקט האחרון שלי, מזהה נסיגות באיכות של סוכני LLM.",
       bio2:
         "מעבר לקוד, אני מפקד לחימה במילואים (חטיבה 188), שזכה להצטיינות גדוד על מנהיגות במהלך \"חרבות ברזל\". אני גם מתנדב במנטורינג של נוער עם מוגבלויות פיזיות בבית גלגלים.",
       name: "שם",
       degree: "תואר",
-      university: "אוניברסיטה",
+      university: "מוסד לימודים",
       focus: "התמחות",
       email: "אימייל",
       status: "סטטוס",

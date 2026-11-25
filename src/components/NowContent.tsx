@@ -8,7 +8,7 @@ const items = [
   {
     emoji: "🎓",
     heading: "Graduated",
-    body: "Completed my B.Sc. in Computer Science at Tel-Hai University (CS Excellence Program, top 5%, GPA 85) in November 2026.",
+    body: "Completed my B.Sc. in Computer Science at Tel-Hai Academic College (CS Excellence Program, top 5%, GPA 85) in November 2026.",
   },
   {
     emoji: "🏢",
