@@ -1,12 +1,16 @@
+"use client";
+
 import FadeIn from "@/components/FadeIn";
+import { useLanguage } from "@/context/LanguageContext";
+import { timelineHe, typeLabelsHe } from "@/data/he";
 
 const timeline = [
   {
-    period: "2024 – 2026",
+    period: "2024 – 2026 (graduated)",
     title: "B.Sc. Computer Science",
     org: "Tel-Hai University",
     description:
-      "Core coursework: Algorithms, Operating Systems, Networks, Databases, Advanced OOP. Specialized in AI Agents, Backend Engineering, and Mobile Development.",
+      "CS Excellence Program (top 5%), GPA 85. Advanced Python (98), Advanced C++ in Linux (97), Full-Stack Software Project (98), Advanced Software Development (96), Operating Systems, Networks, Algorithms, Databases.",
     type: "education",
   },
   {
@@ -76,24 +80,27 @@ const typeLabels: Record<string, string> = {
 };
 
 export default function Experience() {
+  const { t, lang } = useLanguage();
+  const he = lang === "he";
+  const items = timeline.map((it, i) => (he ? { ...it, ...timelineHe[i] } : it));
   return (
     <section id="experience" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <FadeIn>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Experience</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{t.experience.title}</h2>
           <div className="w-12 h-1 bg-indigo-500 rounded mb-10" />
         </FadeIn>
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
+          <div className="absolute start-4 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
 
           <div className="space-y-8">
-            {timeline.map((item, i) => (
+            {items.map((item, i) => (
               <FadeIn key={i} delay={i * 0.07}>
-                <div className="flex gap-6 pl-12 relative">
+                <div className="flex gap-6 ps-12 relative">
                   {/* Dot */}
-                  <div className="absolute left-3 top-1.5 w-3 h-3 rounded-full bg-indigo-500 border-2 border-white dark:border-gray-950 -translate-x-1/2" />
+                  <div className="absolute start-3 top-1.5 w-3 h-3 rounded-full bg-indigo-500 border-2 border-white dark:border-gray-950 -translate-x-1/2 rtl:translate-x-1/2" />
 
                   <div className="flex-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-5">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
@@ -103,7 +110,7 @@ export default function Experience() {
                       </div>
                       <div className="flex flex-wrap gap-2 items-center shrink-0">
                         <span className={`text-xs px-2 py-0.5 rounded-full border font-medium ${typeColors[item.type]}`}>
-                          {typeLabels[item.type]}
+                          {he ? typeLabelsHe[item.type] : typeLabels[item.type]}
                         </span>
                         <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">{item.period}</span>
                       </div>

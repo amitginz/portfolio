@@ -5,19 +5,20 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import { useScrambleText } from "@/hooks/useScrambleText";
 import { useLanguage } from "@/context/LanguageContext";
+import { rolesHe } from "@/data/he";
 import ParticleBackground from "@/components/ParticleBackground";
 import MagneticButton from "@/components/MagneticButton";
 
-const roles = [
+const rolesEn = [
   "Software Engineer",
   "Backend Developer",
-  "AI Agent Builder",
-  "Android Developer",
+  "Full-Stack Developer",
+  "Test Automation",
 ];
 
 export default function Hero() {
-  const typed = useTypewriter(roles);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const typed = useTypewriter(lang === "he" ? rolesHe : rolesEn);
   const scrambled = useScrambleText("Amit Ginzberg");
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -57,7 +58,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-4"
         >
-          I&apos;m{" "}
+          {t.hero.iam}{" "}
           <span className="text-gradient inline-block font-mono">{scrambled}</span>
         </motion.h1>
 

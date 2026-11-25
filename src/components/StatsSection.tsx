@@ -5,8 +5,8 @@ import { motion, useInView } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 
 const stats = [
-  { key: "projects" as const, value: 4, suffix: "+" },
-  { key: "technologies" as const, value: 12, suffix: "+" },
+  { key: "projects" as const, value: 6, suffix: "+" },
+  { key: "technologies" as const, value: 15, suffix: "+" },
   { key: "users" as const, value: 30, suffix: "+" },
   { key: "languages" as const, value: 5, suffix: "" },
 ];

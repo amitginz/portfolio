@@ -12,8 +12,9 @@ export const translations = {
     availability: "Open to work",
     hero: {
       greeting: "Hello, world!",
+      iam: "I'm",
       description:
-        "CS student at Tel-Hai University, building autonomous workflows and interactive applications with Node.js, Python & Java.",
+        "CS graduate from Tel-Hai University, building backend services, LLM-powered tools and web apps with Python, Node.js, C++ & React.",
       viewProjects: "View Projects",
       downloadCV: "Download CV",
       contactMe: "Contact Me",
@@ -21,7 +22,7 @@ export const translations = {
     about: {
       title: "About Me",
       bio1:
-        "Computer Science student at Tel-Hai University (B.Sc. 2024–2026), specialized in AI Agents, Backend Engineering, and Mobile Development. I focus on building autonomous workflows and interactive applications using Node.js, Python, and Java.",
+        "Computer Science graduate of Tel-Hai University (B.Sc. 2026, CS Excellence Program, top 5%, GPA 85), looking for my first role as a software engineer. I build backend services, LLM-powered tools and web apps with Python, Node.js, C++ and React, and I care about testing: AgentProbe, my latest project, catches regressions in LLM agents.",
       bio2:
         "Beyond code, I'm a Combat Commander in IDF Reserve (Brigade 188), awarded Battalion distinction for leadership during \"Iron Swords\". I also volunteer mentoring youth with physical disabilities at Beit Galgalim.",
       name: "Name",
@@ -32,7 +33,7 @@ export const translations = {
       status: "Status",
       statusValue: "Open to opportunities",
       degreeValue: "B.Sc. Computer Science",
-      focusValue: "AI Agents · Backend · Mobile",
+      focusValue: "Backend · Full-Stack · LLM Tools",
     },
     skills: { title: "Skills" },
     projects: {
@@ -45,7 +46,7 @@ export const translations = {
     contact: {
       title: "Get In Touch",
       description:
-        "I'm open to new opportunities in software engineering. Whether you have a question, a project idea, or just want to connect — feel free to reach out.",
+        "I'm open to junior software engineering roles (backend, full-stack, test automation). Whether you have a question, a project idea, or just want to connect — feel free to reach out.",
       name: "Name",
       email: "Email",
       message: "Message",
@@ -94,9 +95,10 @@ export const translations = {
     },
     availability: "פתוח להצעות",
     hero: {
-      greeting: "!שלום, עולם",
+      greeting: "שלום, עולם!",
+      iam: "אני",
       description:
-        "סטודנט למדעי המחשב באוניברסיטת תל-חי, בונה זרימות עבודה אוטונומיות ויישומים אינטראקטיביים עם Node.js, Python ו-Java.",
+        "בוגר מדעי המחשב מאוניברסיטת תל-חי, בונה שירותי Backend, כלים מבוססי LLM ואפליקציות ווב עם Python, Node.js, C++‎ ו-React.",
       viewProjects: "צפה בפרויקטים",
       downloadCV: "הורד קורות חיים",
       contactMe: "צור קשר",
@@ -104,7 +106,7 @@ export const translations = {
     about: {
       title: "אודותי",
       bio1:
-        "סטודנט למדעי המחשב באוניברסיטת תל-חי (תואר ראשון 2024–2026), המתמחה בסוכני בינה מלאכותית, פיתוח Backend ופיתוח מובייל. אני מתמקד בבניית זרימות עבודה אוטונומיות ויישומים אינטראקטיביים באמצעות Node.js, Python ו-Java.",
+        "בוגר מדעי המחשב באוניברסיטת תל-חי (תואר ראשון 2026, תוכנית מצוינות, 5% העליונים, ממוצע 85), מחפש תפקיד ראשון כמהנדס תוכנה. אני בונה שירותי Backend, כלים מבוססי LLM ואפליקציות ווב עם Python, Node.js, C++‎ ו-React, ואכפת לי מבדיקות: AgentProbe, הפרויקט האחרון שלי, מזהה נסיגות באיכות של סוכני LLM.",
       bio2:
         "מעבר לקוד, אני מפקד לחימה במילואים (חטיבה 188), שזכה להצטיינות גדוד על מנהיגות במהלך \"חרבות ברזל\". אני גם מתנדב במנטורינג של נוער עם מוגבלויות פיזיות בבית גלגלים.",
       name: "שם",
@@ -115,7 +117,7 @@ export const translations = {
       status: "סטטוס",
       statusValue: "פתוח להזדמנויות",
       degreeValue: "בוגר מדעי המחשב",
-      focusValue: "סוכני AI · Backend · מובייל",
+      focusValue: "Backend · Full-Stack · כלי LLM",
     },
     skills: { title: "מיומנויות" },
     projects: {
@@ -128,7 +130,7 @@ export const translations = {
     contact: {
       title: "צור קשר",
       description:
-        "אני פתוח להזדמנויות חדשות בפיתוח תוכנה. בין אם יש לך שאלה, רעיון לפרויקט, או סתם רוצה להתחבר — אל תהסס לפנות.",
+        "אני פתוח למשרות ג'וניור בפיתוח תוכנה (Backend, Full-Stack, אוטומציית בדיקות). בין אם יש לך שאלה, רעיון לפרויקט, או סתם רוצה להתחבר — אל תהסס לפנות.",
       name: "שם",
       email: "אימייל",
       message: "הודעה",

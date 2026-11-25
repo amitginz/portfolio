@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import TiltCard from "@/components/TiltCard";
+import { projectsHe } from "@/data/he";
 import { useLanguage } from "@/context/LanguageContext";
 import { projects } from "@/data/projects";
 
@@ -12,7 +13,8 @@ const allTags = ["All", ...Array.from(new Set(projects.flatMap((p) => p.tags)))]
 export default function Projects() {
   const [activeTag, setActiveTag] = useState("All");
   const [expanded, setExpanded] = useState<string | null>(null);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const loc = (p: (typeof projects)[number]) => (lang === "he" && projectsHe[p.slug] ? { ...p, ...projectsHe[p.slug] } : p);
 
   const filtered = activeTag === "All" ? projects : projects.filter((p) => p.tags.includes(activeTag));
 
@@ -43,10 +45,11 @@ export default function Projects() {
         </FadeIn>
 
         <div className="grid gap-6">
-          {filtered.map((p, i) => {
-            const isOpen = expanded === p.title;
+          {filtered.map((p0, i) => {
+            const p = loc(p0);
+            const isOpen = expanded === p.slug;
             return (
-              <FadeIn key={p.title} delay={i * 0.08}>
+              <FadeIn key={p.slug} delay={i * 0.08}>
                 <TiltCard className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors">
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-4 mb-3">
@@ -75,7 +78,7 @@ export default function Projects() {
                     <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{p.description}</p>
 
                     {isOpen && (
-                      <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 border-l-2 border-indigo-400 pl-4">
+                      <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 border-s-2 border-indigo-400 ps-4">
                         {p.detail}
                       </p>
                     )}
@@ -93,7 +96,7 @@ export default function Projects() {
                         ))}
                       </div>
                       <button
-                        onClick={() => setExpanded(isOpen ? null : p.title)}
+                        onClick={() => setExpanded(isOpen ? null : p.slug)}
                         className="text-xs text-gray-400 dark:text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                       >
                         {isOpen ? t.projects.seeLess : t.projects.seeMore}

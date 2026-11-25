@@ -13,6 +13,55 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "agentprobe",
+    title: "AgentProbe: Regression Testing for LLM Agents",
+    emoji: "🧪",
+    description:
+      "Checks whether an LLM agent got worse after a change: records agent runs and flags real regressions with a statistical test.",
+    detail:
+      "Runs an agent against a dataset, records a full trace of every task, and compares two runs with a paired exact McNemar test, so one flaky task does not count as a regression. Exits with a non-zero code on regression, so a pull request that degrades the agent fails CI.",
+    longDetail:
+      "AgentProbe answers the question that matters before shipping a prompt or model change: did the agent get better, worse, or is it just noise? Because both runs answer the same tasks, the outcomes are paired and an exact McNemar test is applied to the tasks that flipped. The project includes a thread-pool runner with retries and a hard cost budget, deterministic and LLM-as-judge evaluators with calibration, a FastAPI service with a web dashboard, a Redis job queue with leases and heartbeats for crash recovery, OpenTelemetry traces, Alembic migrations and a reusable GitHub Action.",
+    tags: ["Python", "FastAPI", "Redis", "OpenTelemetry", "GitHub Actions"],
+    github: "https://github.com/amitginz/agentprobe",
+    highlights: [
+      "Paired exact McNemar test to separate regressions from noise",
+      "Redis job queue that survives crashes (leases, heartbeats)",
+      "OpenTelemetry tracing across API, queue and workers",
+      "GitHub Action that fails a pull request when quality drops",
+    ],
+    stack: [
+      { label: "Language", items: ["Python"] },
+      { label: "Services", items: ["FastAPI", "Redis", "SQLAlchemy / PostgreSQL"] },
+      { label: "Observability", items: ["OpenTelemetry"] },
+      { label: "CI/CD", items: ["GitHub Actions", "Docker"] },
+    ],
+  },
+  {
+    slug: "exam-system",
+    title: "Online Exam Management System",
+    emoji: "📝",
+    description:
+      "React web app for running exams, with user roles and exam submissions (team project).",
+    detail:
+      "A full-stack team project: a React front end on top of Node.js/Express REST APIs and a relational database. I built the REST APIs and the database schema.",
+    longDetail:
+      "A full-stack web application for managing and running exams, built as a team project in the Full-Stack Software Project course (grade 98). The React front end supports different user roles and exam submissions, and talks to Node.js/Express REST APIs backed by a database. My part was the REST API layer and the database schema.",
+    tags: ["React", "Node.js", "Express", "REST APIs", "SQL"],
+    github: "https://github.com/Hkuser18/FullStack_React",
+    highlights: [
+      "React front end with user roles and exam submissions",
+      "Node.js/Express REST APIs, built by me",
+      "Relational database schema designed by me",
+      "Team project, Git and pull-request workflow",
+    ],
+    stack: [
+      { label: "Front end", items: ["React", "JavaScript"] },
+      { label: "Back end", items: ["Node.js", "Express"] },
+      { label: "Data", items: ["SQL database"] },
+    ],
+  },
+  {
     slug: "gadash",
     title: "Gadash: Intelligent Operational Agent",
     emoji: "🤖",
