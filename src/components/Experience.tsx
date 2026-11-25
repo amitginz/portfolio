@@ -8,7 +8,7 @@ const timeline = [
   {
     period: "2024 – 2026 (graduated)",
     title: "B.Sc. Computer Science",
-    org: "Tel-Hai Academic College",
+    org: "Tel-Hai University, Kiryat Shmona",
     description:
       "CS Excellence Program (top 5%), GPA 85. Advanced Python (98), Advanced C++ in Linux (97), Full-Stack Software Project (98), Advanced Software Development (96), Operating Systems, Networks, Algorithms, Databases.",
     type: "education",
