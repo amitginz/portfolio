@@ -138,26 +138,26 @@ export const projects: Project[] = [
   },
   {
     slug: "combat-sim",
-    title: "OOP Simulation Engine for Strategic Combat",
+    title: "Graph Algorithms & Pokémon Game Agents",
     emoji: "⚔️",
     description:
-      "Pokémon-themed simulation engine modelling complex turn-based combat and dynamic character state management.",
+      "Python agents that move on a weighted graph and collect Pokémon in a server-run game (team assignment).",
     detail:
-      "Utilized advanced OOP (Polymorphism, Inheritance) to create a decoupled framework capable of managing hundreds of unique entity variants. Focused on high-performance algorithms to keep the engine modular and scalable.",
+      "Built on a weighted directed graph library with Dijkstra shortest paths, graph center and a simple TSP heuristic. Agents choose targets by shortest path, with a Pygame visualisation and unit tests.",
     longDetail:
-      "A Pokémon-inspired turn-based combat simulation engine written in Python using advanced object-oriented principles. The engine models entities (trainers, Pokémon, moves, status effects) through deep class hierarchies, with Polymorphism driving the combat resolution logic — each entity variant overrides base behaviors without breaking the shared contract. The battle loop processes hundreds of unique entity types through a single unified interface. Design patterns (Strategy, Observer, Factory) keep the codebase decoupled: adding a new Pokémon or move type requires zero changes to the engine core. Performance profiling guided optimizations to the damage calculation and state-transition algorithms.",
-    tags: ["Python", "OOP", "Design Patterns", "Algorithms"],
+      "A two-person university assignment written in Python. The goal of the game is to place agents on a weighted directed graph and collect as many Pokémon as possible within the server's limit on calls per second. The project includes a graph library behind abstract interfaces (JSON load and save, Dijkstra shortest paths, connectivity check, graph center and a simple TSP heuristic), a client that talks to the game server, target selection for each agent by shortest path, a Pygame view of the live game, and unit tests for the graph, the algorithms and the game entities.",
+    tags: ["Python", "Graph Algorithms", "OOP", "Pygame"],
     github: "https://github.com/amitginz/Ex4_oop",
     highlights: [
-      "Deep OOP hierarchy with Polymorphism & Inheritance",
-      "Strategy, Observer & Factory design patterns",
-      "Hundreds of unique entity variants, one engine core",
-      "Profiling-guided performance optimization",
+      "Weighted directed graph behind abstract interfaces",
+      "Dijkstra shortest paths, graph center and TSP heuristic",
+      "Target selection per agent by shortest path",
+      "Pygame visualisation and unit tests",
     ],
     stack: [
       { label: "Language", items: ["Python"] },
-      { label: "Patterns", items: ["Strategy", "Observer", "Factory"] },
-      { label: "Concepts", items: ["Polymorphism", "Inheritance", "Encapsulation"] },
+      { label: "Libraries", items: ["Pygame", "unittest"] },
+      { label: "Concepts", items: ["Graphs", "Dijkstra", "Object-oriented design"] },
     ],
   },
 ];
